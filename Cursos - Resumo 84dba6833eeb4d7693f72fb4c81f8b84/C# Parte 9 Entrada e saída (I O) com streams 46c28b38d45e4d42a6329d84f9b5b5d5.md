@@ -125,7 +125,7 @@ O StreamWriter não fica passando os dados imediatamente para o arquivo, ele acu
 
 ### BinaryReader e BinaryWriter
 
-Representar texto em binário
+Representar texto em binário. O BinaryReader "lê" o código binário usando um enconding para traduzí-lo. Já o BinaryWriter "lê" um "texto normal" e usa o enconding para transformá-lo em binário.
 
 ### Como a Console funciona com streams e Console.OpenStandartInput();
 

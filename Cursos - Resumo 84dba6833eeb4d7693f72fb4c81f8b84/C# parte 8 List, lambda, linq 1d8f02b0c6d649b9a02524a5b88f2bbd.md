@@ -38,7 +38,21 @@ public static void ListEstensoes <T>
 }
 ```
 
-### O que é uma expressão lambda?
+### O que é uma expressão lambda (⇒)?
+
+### Exemplo de expressão lambda (⇒)
+
+```csharp
+IOrderedEnumerable<ContaCorrente> OrdenandoContas = contas.OrderBy(conta =>
+{
+	if (conta == null)
+	{
+	return int.MaxValue;
+	}
+	return conta.Numero;
+}
+// Expressões lambdas aceitam operações "internas"
+```
 
 ### Como utilizar uma expressão lambda?
 
@@ -49,6 +63,16 @@ IOrderedEnumerable<ContaCorrente> contasOrdenadas =
 foreach (var conta in contasOrdenadas)
 {
         Console.WriteLine($"Conta número {conta.Numero}, ag. {conta.Agencia}");
+}
+
+// Expressões lambdas também aceitam operações "internas"
+IOrderedEnumerable<ContaCorrente> OrdenandoContas = contas.OrderBy(conta =>
+{
+	if (conta == null)
+	{
+	return int.MaxValue;
+	}
+	return conta.Numero;
 }
 ```
 
